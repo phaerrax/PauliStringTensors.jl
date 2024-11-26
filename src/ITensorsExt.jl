@@ -1,16 +1,16 @@
 #module ITensorsExt
 
 #using PauliStrings
-using ITensors
+using ITensors: ITensors
 
 # ITensors interoperability extension
 
 """
-    op(p::PauliString)
+    op(sites::Vector{<:Index}, p::PauliString)
 
 Return an ITensor corresponding the Pauli string operator.
 """
-function ITensors.op(sites::Vector{<:Index}, p::PauliString)
+function ITensors.op(sites::Vector{<:ITensors.Index}, p::PauliString)
     length(p) != length(sites) && "Lengths of Pauli string and Index vector differ."
     x = ITensors.OneITensor()
     for (s, i) in zip(string.(PauliStrings.pauli_inttochar.(operators(p))), indices(p))
