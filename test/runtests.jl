@@ -1,6 +1,8 @@
 using PauliStrings
 using Test
 
-@testset "PauliStrings.jl" begin
-    # Write your tests here.
+include("pauli_string_constructors.jl")
+
+@testset "Consistency of Pauli string constructors" begin
+    @test pauli_string_constructors()
 end

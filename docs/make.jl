@@ -7,11 +7,6 @@ makedocs(;
     modules=[PauliStrings],
     authors="Davide Ferracin <davide.ferracin@protonmail.com> and contributors",
     sitename="PauliStrings.jl",
-    format=Documenter.HTML(;
-        edit_link="main",
-        assets=String[],
-    ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    format=Documenter.HTML(; edit_link="main", assets=String[]),
+    pages=["Home" => "index.md"],
 )

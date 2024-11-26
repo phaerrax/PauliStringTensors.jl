@@ -1,5 +1,6 @@
 module PauliStrings
 
-# Write your package code here.
+export PauliString, indices, operators, order
+include("paulistring.jl")
 
 end
