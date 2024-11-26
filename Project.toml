@@ -1,7 +1,7 @@
 name = "PauliStrings"
 uuid = "3a97391d-bfb9-411c-b0e9-b32c43ed22e1"
 authors = ["Davide Ferracin <davide.ferracin@protonmail.com> and contributors"]
-version = "0.1.2"
+version = "0.1.3"
 
 [deps]
 ITensorMPS = "0d1a4710-d33b-49a5-8f18-73bdf49b47e2"
