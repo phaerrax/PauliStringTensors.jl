@@ -2,7 +2,9 @@ module LindbladVectorizedTensorsExt
 
 using PauliStrings
 
-using ITensorMPS, LindbladVectorizedTensors
+using LindbladVectorizedTensors
+using ITensorMPS
+
 using ITensors: Index
 using ITensors.SiteTypes: _sitetypes, commontags, tags
 

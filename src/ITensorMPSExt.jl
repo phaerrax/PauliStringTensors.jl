@@ -1,27 +1,12 @@
-module ITensorMPSExt
-
-using PauliStrings
-
+#module ITensorMPSExt
+#
+#using PauliStrings
 using ITensorMPS
 
-using ITensors: Index, OneITensor
-using ITensors.SiteTypes: _sitetypes, commontags, tags
+import ITensors: Index
+import ITensors.SiteTypes: _sitetypes, commontags, tags
 
-# ITensor interoperability extension
-
-"""
-    op(p::PauliString)
-
-Return an ITensor corresponding the Pauli string operator.
-"""
-function ITensors.op(sites::Vector{<:Index}, p::PauliString)
-    length(p) != length(sites) && "Lengths of Pauli string and Index vector differ."
-    x = OneITensor()
-    for (s, i) in zip(string.(PauliStrings.pauli_inttochar.(operators(p))), indices(p))
-        x *= op(sites, s, i)
-    end
-    return x
-end
+# ITensorMPS interoperability extension
 
 ITensorMPS.MPO(::SiteType, sites::Vector{<:Index}, p::PauliString) = nothing
 
@@ -53,4 +38,4 @@ function ITensorMPS.MPO(::SiteType"Qubit", sites::Vector{<:Index}, p::PauliStrin
     return MPO(ComplexF64, sites, opnames)
 end
 
-end
+#end
