@@ -2,7 +2,9 @@ module ITensorMPSExt
 
 using PauliStrings
 
-using ITensors, ITensorMPS
+using ITensorMPS
+
+using ITensors: Index, OneITensor
 using ITensors.SiteTypes: _sitetypes, commontags, tags
 
 # ITensor interoperability extension
