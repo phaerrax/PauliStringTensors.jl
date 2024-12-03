@@ -1,4 +1,4 @@
-using PauliStrings
+using PauliStringTensors
 using Test
 
 include("pauli_string_constructors.jl")

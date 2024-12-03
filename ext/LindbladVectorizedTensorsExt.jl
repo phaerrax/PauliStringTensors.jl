@@ -1,6 +1,6 @@
 module LindbladVectorizedTensorsExt
 
-using PauliStrings
+using PauliStringTensors
 
 using LindbladVectorizedTensors
 using ITensorMPS
@@ -35,7 +35,7 @@ function ITensorMPS.MPS(sites::Vector{<:Index}, p::PauliString)
 end
 
 function ITensorMPS.MPS(::SiteType"vQubit", sites::Vector{<:Index}, p::PauliString)
-    statenames = string.(PauliStrings.pauli_inttochar.(p.string))
+    statenames = string.(PauliStringTensors.pauli_inttochar.(p.string))
     statenames = replace.(statenames, "I" => "Id")
     vstatenames = ["v$sn" for sn in statenames]
     return MPS(sites, vstatenames)

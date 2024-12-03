@@ -1,4 +1,4 @@
-name = "PauliStrings"
+name = "PauliStringTensors"
 uuid = "3a97391d-bfb9-411c-b0e9-b32c43ed22e1"
 authors = ["Davide Ferracin <davide.ferracin@protonmail.com> and contributors"]
 version = "0.1.4"

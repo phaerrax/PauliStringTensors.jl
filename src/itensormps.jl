@@ -1,6 +1,3 @@
-#module ITensorMPSExt
-#
-#using PauliStrings
 using ITensorMPS
 
 import ITensors: Index
@@ -33,9 +30,7 @@ function ITensorMPS.MPO(sites::Vector{<:Index}, p::PauliString)
 end
 
 function ITensorMPS.MPO(::SiteType"Qubit", sites::Vector{<:Index}, p::PauliString)
-    opnames = string.(PauliStrings.pauli_inttochar.(p.string))
+    opnames = string.(pauli_inttochar.(p.string))
     opnames = replace.(opnames, "I" => "Id")
     return MPO(ComplexF64, sites, opnames)
 end
-
-#end

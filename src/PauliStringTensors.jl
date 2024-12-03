@@ -1,8 +1,8 @@
-module PauliStrings
+module PauliStringTensors
 
 export PauliString, indices, operators, order
 include("paulistring.jl")
-include("ITensorsExt.jl")
-include("ITensorMPSExt.jl")
+include("itensors.jl")
+include("itensormps.jl")
 
 end
