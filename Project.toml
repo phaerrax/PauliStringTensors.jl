@@ -1,7 +1,7 @@
 name = "PauliStringTensors"
 uuid = "3a97391d-bfb9-411c-b0e9-b32c43ed22e1"
 authors = ["Davide Ferracin <davide.ferracin@protonmail.com> and contributors"]
-version = "0.1.4"
+version = "0.1.5"
 
 [deps]
 ITensorMPS = "0d1a4710-d33b-49a5-8f18-73bdf49b47e2"
@@ -14,10 +14,7 @@ LindbladVectorizedTensors = "6455c26f-8985-4381-925b-8a93509e9dbd"
 LindbladVectorizedTensorsExt = "LindbladVectorizedTensors"
 
 [compat]
-ITensorMPS = "0.3.2"
-ITensors = "0.7.7"
 LindbladVectorizedTensors = ">= 0.16.1"
-julia = "1.9"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
